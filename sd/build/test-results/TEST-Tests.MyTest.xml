@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests.MyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-19T12:18:45" hostname="DESKTOP-07DKQ7U" time="1.979">
+  <properties/>
+  <testcase name="simpleRun" classname="Tests.MyTest" time="1.979"/>
+  <system-out><![CDATA[------------------------------------------------------------------
+Page current url is: http://www.google.com.ua/?gfe_rd=cr&ei=GUMwWO3sM4rFYNHgj7gB
+------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[[INFO  - 2016-11-19T12:18:46.377Z] ShutdownReqHand - _handle - About to shutdown
+]]></system-err>
+</testsuite>

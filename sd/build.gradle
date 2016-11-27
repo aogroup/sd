@@ -1,0 +1,46 @@
+group 'com.dh'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+    compile group: 'org.testng', name: 'testng', version: '6.9.10'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.0.1'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+}
+
+ task myTask(type: Test){
+     systemProperty "driver", "chrome"
+     useTestNG(){
+         suites "src\\test\\resources\\testng-suite.xml"
+     }
+
+ }
+
+task firefoxtest(type: Test) {
+    systemProperty "driver", "firefox"
+    useTestNG() {
+        suites "src\\test\\resources\\testng-suite.xml"
+    }
+}
+
+task iedriver(type: Test) {
+    systemProperty "driver", "ie"
+    useTestNG() {
+        suites "src\\test\\resources\\testng-suite.xml"
+    }
+}
+
+    task phantomjs(type: Test) {
+        systemProperty "driver", "phantomjs"
+        useTestNG() {
+            suites "src\\test\\resources\\testng-suite.xml"
+        }
+    }
